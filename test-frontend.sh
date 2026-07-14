@@ -26,7 +26,7 @@ if ! yarn dedupe --strategy highest --check ; then
 fi
 
 if [ "$OPENSHIFT_CI" = true ]; then
-  JEST_SUITE_NAME="Plugin unit tests" JEST_JUNIT_OUTPUT_DIR="$ARTIFACT_DIR" yarn run test --ci --maxWorkers=2 --reporters=default --reporters=jest-junit
+  RSTEST_JUNIT_OUTPUT="$ARTIFACT_DIR/junit.xml" yarn run test --pool.maxWorkers=2
 else
   yarn run test
 fi

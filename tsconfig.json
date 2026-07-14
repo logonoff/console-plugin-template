@@ -6,7 +6,7 @@
     "allowJs": true,
     "strict": true,
     "noUnusedLocals": true,
-    "types": ["jest", "@testing-library/jest-dom", "node"]
+    "types": ["@rstest/core/globals", "@testing-library/jest-dom", "node"]
   },
   "include": ["src"],
   "exclude": ["node_modules", ".yarn"],
